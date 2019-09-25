@@ -1,0 +1,8 @@
+pandas
+biopython
+numpy
+lumpy
+scipy
+PyYAML
+cython
+cutadapt
