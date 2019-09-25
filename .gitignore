@@ -1,0 +1,17 @@
+# text files
+*.txt
+
+# csv files
+*.csv
+
+# python pyc files
+*.pyc
+
+# fastq files
+*.fastq.gz
+
+# alignment files
+*.bam
+
+# html files
+*.html
