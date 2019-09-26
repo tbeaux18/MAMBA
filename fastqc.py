@@ -71,7 +71,7 @@ def run_fastqc(fastqc_log, **kwargs):
 
     fastqc_formatted_args = shlex.split(fastqc_command)
 
-    with open(fastqc_log, 'ab+') as fastqc_stdout:
+    with open(str(fastqc_log), 'ab+') as fastqc_stdout:
         fastqc_process = subprocess.Popen(
             fastqc_formatted_args,
             bufsize=20,
