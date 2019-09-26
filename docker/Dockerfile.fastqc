@@ -1,0 +1,10 @@
+# start from base
+FROM ubuntu:r35
+MAINTAINER Timothy Baker <tbaker8@luc.edu>
+
+
+RUN mkdir data
+
+WORKDIR /pipeline/SCRAPIE
+
+CMD ["python3", "fastqc.py", "-d", "/data/meta_fastq"]
