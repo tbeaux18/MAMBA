@@ -12,7 +12,7 @@ import argparse
 import shlex
 import subprocess
 import logging
-import glob
+import sys
 import re
 import collections
 
@@ -44,7 +44,7 @@ def gather_fastq(fastq_directory):
         sample_name = sample_regex.match(path.stem)
 
         if sample_name:
-            fastq_dict[sample_name[1]].append(str(path))
+            fastq_dict[sample_name.group(1)].append(str(path))
         else:
             print(path, "is probably a directory.")
 
@@ -93,7 +93,6 @@ def main():
 
     fastq_main_dict = gather_fastq(fastq_dir)
 
-
     script_path = pathlib.Path(__file__)
 
     script_parent = script_path.resolve().parent
@@ -120,9 +119,6 @@ def main():
             fastq_read1=fastq_array[0],
             fastq_read2=fastq_array[1]
         )
-
-
-
 
 
 
