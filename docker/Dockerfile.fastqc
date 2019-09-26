@@ -1,5 +1,5 @@
 # start from base
-FROM ubuntu:r35
+FROM ubuntu:rbase35
 MAINTAINER Timothy Baker <tbaker8@luc.edu>
 
 
